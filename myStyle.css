@@ -1,0 +1,331 @@
+/* All codes written by Gerald Kufanga, 2nd year software development student at the Namibia University of Science and Technology
+All codes are written with comments next to them to ensure clarity
+*/
+
+/* Global Styles */
+body {
+  background-color: #003366;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(132deg, #F4D03F, #16A085);
+  color: white;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-link {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.logo-img {
+  display: block;
+  height: auto;
+  max-width: 70px;
+  margin: 0 auto;
+}
+
+.logo-text {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 0xp;
+  text-transform: uppercase;
+  color: rgb(239, 225, 225);
+  display: flex;
+  align-items: center;
+}
+
+.logo-text i {
+  margin-left: 5px; /* Adjust the spacing between text and icon */
+  color: #16A085; /* Color of the tick icon */
+}
+
+/* Navigation Styles */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  margin-right: 30px;
+}
+
+.nav-link {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+  transform: scale(1.05);
+}
+
+/* Main Content Styles */
+main {
+  padding: 20px;
+}
+
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+ul {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+ol {
+  font-family: Helvetica, sans-serif;
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+img {
+  border: 1px solid white;
+  max-width: 100%;
+  transition: transform 0.3s ease;
+  margin-top: 30px;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+/* Profile Page css Styles */
+body.profile-page {
+  background-color: #003366;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.profile-details {
+  background: linear-gradient(132deg, #F4D03F, #16A085);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 30px;
+}
+.profile-details h1 {
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.profile-details p {
+  margin: 8px 0;
+  line-height: 1.6;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  margin-top: 6px;
+  position: relative; /* Add this line */
+  
+}
+
+.profile-details p::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-details p:hover::after {
+  transform: scaleX(1);
+}
+
+.profile-details span {
+  color: #030303;
+  font-weight: bold;
+}
+
+.profile-details p span {
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.profile-details p:hover {
+  opacity: 0.8;
+  transform: translateY(-5px);
+}
+
+.profile-details:hover p span {
+  transform: scale(1.1);
+}
+
+/* Adding styles for the animated list */
+.animated-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.friends-list {
+  list-style-type: none;
+  counter-reset: item;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.friends-list li {
+  position: relative;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: white;
+  background: linear-gradient(132deg, #F4D03F, #16A085);
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.friends-list li:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.friends-list li::before {
+  content: counter(item) ".";
+  counter-increment: item;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* Add animation to the list items */
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.friends-list li:hover {
+  animation: jump 0.5s ease-in-out infinite;
+}
+
+/* Adjust the width of the boxes for responsiveness */
+@media (max-width: 768px) {
+  .animated-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Animation Box Styles */
+.animation-box {
+  background: linear-gradient(132deg, #F4D03F, #16A085);
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.animation-text {
+  font-family: Helvetica, sans-serif;
+  font-size: 24px;
+  color: white;
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Navigation Link Underline Animation */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+nav ul li a::before {
+  content: "";
+  display: block;
+  height: 5px;
+  background: #003366;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+  transition: transform ease-in-out 250ms;
+}
+
+.nav-link::before {
+  content: "";
+  display: block;
+  height: 5px;
+  background: #003366;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+  transition: transform ease-in-out 250ms;
+}
+
+nav ul li a:hover::before {
+  transform: scaleX(1);
+}
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+}
+
