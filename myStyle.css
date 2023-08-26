@@ -328,4 +328,51 @@ footer {
 footer p {
   margin: 0;
 }
+/* Rest of your CSS rules */
+
+@media screen and (max-width: 768px) {
+  /* Adjust logo size for smaller screens */
+  .logo-img {
+      max-width: 50px;
+  }
+
+  /* Adjust navigation for smaller screens */
+  nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  nav ul li {
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+
+  /* Adjust object height for smaller screens */
+  object {
+      height: auto;
+  }
+}
+/* Rest of your CSS rules */
+
+@media screen and (max-width: 768px) {
+  /* Adjust logo size for smaller screens */
+  .logo-img {
+      max-width: 50px;
+  }
+
+  /* Adjust navigation for smaller screens */
+  nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  nav ul li {
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+
+  /* Adjust object height for smaller screens */
+  object {
+      height: auto;
+  }
+}
+
 
