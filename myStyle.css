@@ -1,8 +1,11 @@
 /* All codes written by Gerald Kufanga, 2nd year software development student at the Namibia University of Science and Technology
-All codes are written with comments next to them to ensure clarity
+All codes are written with comments next to them to ensure clarity and for future reference, incase i i decide to use the same CSS styles in my next project
+As a great way to grasp content while learning, i added extra css rules that i had just learned*/
+/*
+  line 10 shows that applied the color 'blue' to the background
+  line 113 shows that I set the image border be to 1px solid white
 */
 
-/* Global Styles */
 body {
   background-color: #003366;
   color: white;
@@ -42,8 +45,10 @@ header {
 }
 
 .logo-text i {
-  margin-left: 5px; /* Adjust the spacing between text and icon */
-  color: #16A085; /* Color of the tick icon */
+  margin-left: 5px;
+  /* Adjust the spacing between text and icon */
+  color: #16A085;
+  /* Color of the tick icon */
 }
 
 /* Navigation Styles */
@@ -127,11 +132,12 @@ body.profile-page {
   background: linear-gradient(132deg, #F4D03F, #16A085);
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 6px rgba(8, 21, 200, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-top: 30px;
 }
+
 .profile-details h1 {
   color: white;
   font-size: 1.5rem;
@@ -146,8 +152,9 @@ body.profile-page {
   transform: translateY(0);
   transition: opacity 0.6s ease, transform 0.6s ease;
   margin-top: 6px;
-  position: relative; /* Add this line */
-  
+  position: relative;
+  /* Add this line */
+
 }
 
 .profile-details p::after {
@@ -155,7 +162,7 @@ body.profile-page {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: black;
+  background-color: rgb(4, 21, 89);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -232,9 +239,12 @@ body.profile-page {
 
 /* Add animation to the list items */
 @keyframes jump {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -273,6 +283,7 @@ body.profile-page {
     transform: translateY(-50px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -315,64 +326,55 @@ nav ul li a::before {
 nav ul li a:hover::before {
   transform: scaleX(1);
 }
-footer {
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
 
-footer p {
-  margin: 0;
-}
-/* Rest of your CSS rules */
+/* My extra CSS rules */
 
 @media screen and (max-width: 768px) {
-  /* Adjust logo size for smaller screens */
+
+  /* ths is To adjust logo size for smaller screens */
   .logo-img {
-      max-width: 50px;
+    max-width: 50px;
   }
 
   /* Adjust navigation for smaller screens */
   nav ul {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
+
   nav ul li {
-      margin-right: 0;
-      margin-bottom: 10px;
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 
   /* Adjust object height for smaller screens */
   object {
-      height: auto;
+    height: auto;
   }
 }
+
 /* Rest of your CSS rules */
 
 @media screen and (max-width: 768px) {
+
   /* Adjust logo size for smaller screens */
   .logo-img {
-      max-width: 50px;
+    max-width: 50px;
   }
 
   /* Adjust navigation for smaller screens */
   nav ul {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
+
   nav ul li {
-      margin-right: 0;
-      margin-bottom: 10px;
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 
   /* Adjust object height for smaller screens */
   object {
-      height: auto;
+    height: auto;
   }
 }
-
-
